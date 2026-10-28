@@ -1,0 +1,299 @@
+{
+ "id": "indian_independence",
+ "domain": "history",
+ "keywords": "india indian independence freedom struggle british gandhi nehru congress 1947 1857 salt march dandi quit swadeshi colonial",
+ "facts": [
+  "The revolt of 1857 is called India's First War of Independence.",
+  "The Indian National Congress was founded in 1885.",
+  "Gandhi led the Non-Cooperation Movement (1920), the Salt March to Dandi (1930) and Quit India (1942).",
+  "India became independent on 15 August 1947, with partition into India and Pakistan.",
+  "Methods included non-violence (ahimsa), boycotts and swadeshi."
+ ],
+ "prerequisites": [
+  "British rule in India",
+  "World War II"
+ ],
+ "next_topics": [
+  "The Indian Constitution",
+  "Partition of 1947",
+  "Mahatma Gandhi"
+ ],
+ "lesson": {
+  "title": "India's road to independence",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "India's road to independence",
+    "subtitle": "Key moments from 1857 to 1947",
+    "narration": [
+     {
+      "text": "India's struggle for freedom from British rule lasted about ninety years."
+     }
+    ]
+   },
+   {
+    "type": "timeline",
+    "heading": "Step 1: Key events",
+    "events": [
+     {
+      "label": "1857",
+      "text": "A great revolt against British rule"
+     },
+     {
+      "label": "1885",
+      "text": "Indian National Congress founded"
+     },
+     {
+      "label": "1920",
+      "text": "Non-Cooperation Movement"
+     },
+     {
+      "label": "1930",
+      "text": "Salt March to Dandi"
+     },
+     {
+      "label": "1942",
+      "text": "Quit India Movement"
+     },
+     {
+      "label": "1947",
+      "text": "Independence on 15 August"
+     }
+    ],
+    "narration": [
+     {
+      "text": "In eighteen fifty-seven, a large revolt against British rule began.",
+      "focus": 0
+     },
+     {
+      "text": "In eighteen eighty-five, the Indian National Congress was formed.",
+      "focus": 1
+     },
+     {
+      "text": "In nineteen thirty, Gandhi led the Salt March to Dandi.",
+      "focus": 3
+     },
+     {
+      "text": "On fifteenth August nineteen forty-seven, India became independent.",
+      "focus": 5
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 2: How people struggled",
+    "layout": "stack",
+    "items": [
+     "Non-violence (ahimsa)",
+     "Boycott of British goods",
+     "Mass peaceful marches"
+    ],
+    "icons": [
+     "🕊️",
+     "🧵",
+     "🚶"
+    ],
+    "narration": [
+     {
+      "text": "Gandhi led the struggle through non-violence.",
+      "focus": 0
+     },
+     {
+      "text": "People boycotted British goods and wore Indian khadi cloth.",
+      "focus": 1
+     },
+     {
+      "text": "Huge peaceful marches united millions of Indians.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "timeline",
+    "heading": "Step 3: Gandhi's mass movements",
+    "events": [
+     {
+      "label": "1917",
+      "text": "Champaran: support for indigo farmers"
+     },
+     {
+      "label": "1920",
+      "text": "Non-Cooperation: boycott British institutions"
+     },
+     {
+      "label": "1930",
+      "text": "Civil Disobedience: Salt March"
+     },
+     {
+      "label": "1942",
+      "text": "Quit India: 'Do or die'"
+     }
+    ],
+    "narration": [
+     {
+      "text": "In nineteen seventeen, Gandhi supported indigo farmers in Champaran.",
+      "focus": 0
+     },
+     {
+      "text": "In nineteen twenty, Indians boycotted British schools, courts and goods.",
+      "focus": 1
+     },
+     {
+      "text": "In nineteen thirty, he walked to Dandi to make salt, breaking the salt law.",
+      "focus": 2
+     },
+     {
+      "text": "In nineteen forty-two, the Quit India Movement demanded that the British leave.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 4: Why freedom came in 1947",
+    "layout": "stack",
+    "items": [
+     "Mass movements across India",
+     "Britain weakened by World War II",
+     "The naval mutiny of 1946"
+    ],
+    "icons": [
+     "👥",
+     "🌍",
+     "⚓"
+    ],
+    "narration": [
+     {
+      "text": "Decades of mass movements made British rule very hard to continue.",
+      "focus": 0
+     },
+     {
+      "text": "The Second World War left Britain weak and in debt.",
+      "focus": 1
+     },
+     {
+      "text": "In nineteen forty-six, Indian sailors of the Royal Navy rebelled.",
+      "focus": 2
+     },
+     {
+      "text": "Independence came with partition into India and Pakistan."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 9: Ways of peaceful protest",
+    "layout": "hub",
+    "items": [
+     "Non-violent protest",
+     "Boycott of British goods",
+     "Salt March, 1930",
+     "Quit India, 1942"
+    ],
+    "icons": [
+     "🕊️",
+     "🧵",
+     "🧂",
+     "📣"
+    ],
+    "narration": [
+     {
+      "text": "Leaders chose peaceful methods that ordinary people could join.",
+      "focus": 0
+     },
+     {
+      "text": "Boycotting British cloth hurt British trade and promoted Indian goods.",
+      "focus": 1
+     },
+     {
+      "text": "In the Salt March, Gandhi walked to Dandi to break the salt law peacefully.",
+      "focus": 2
+     },
+     {
+      "text": "In 1942 the Quit India movement demanded that the British leave.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "In which year did India become independent?",
+    "options": [
+     "1947",
+     "1857",
+     "1930"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. In which year did India become independent?"
+     },
+     {
+      "text": "Nineteen forty-seven, on the fifteenth of August.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What was the Salt March protesting?",
+    "options": [
+     "The British tax on salt",
+     "A lack of schools",
+     "High train fares"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What was the Salt March against?"
+     },
+     {
+      "text": "The British tax on salt.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Which 1942 movement demanded the British leave India at once?",
+    "options": [
+     "Quit India Movement",
+     "Non-Cooperation Movement",
+     "Swadeshi Movement"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Which movement of nineteen forty-two said leave India now?"
+     },
+     {
+      "text": "The Quit India Movement.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,292 @@
+{
+ "id": "acids_bases",
+ "domain": "chemistry",
+ "keywords": "acid acids base bases alkali alkaline ph neutral neutralisation neutralization salt indicator hydrogen ions",
+ "facts": [
+  "The pH scale runs from 0 to 14; below 7 is acidic, 7 is neutral, above 7 is basic.",
+  "Lemon juice is about pH 2; pure water is pH 7; bleach is about pH 12 to 13.",
+  "Acid + base → salt + water (neutralisation).",
+  "pH = −log10[H+]; each pH unit is a tenfold change.",
+  "HCl + NaOH → NaCl + H2O."
+ ],
+ "prerequisites": [
+  "Atoms and molecules",
+  "Solutions"
+ ],
+ "next_topics": [
+  "Indicators",
+  "Chemical reactions",
+  "Salts"
+ ],
+ "lesson": {
+  "title": "Acids and bases",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "Acids and bases",
+    "subtitle": "The pH scale",
+    "narration": [
+     {
+      "text": "Acids and bases are two families of chemicals, measured on the pH scale."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: The pH scale",
+    "layout": "stack",
+    "items": [
+     "0 to 6: acidic",
+     "7: neutral",
+     "8 to 14: basic (alkaline)"
+    ],
+    "icons": [
+     "🍋",
+     "💧",
+     "🧼"
+    ],
+    "narration": [
+     {
+      "text": "A pH below seven means acidic, like lemon juice.",
+      "focus": 0
+     },
+     {
+      "text": "Pure water is neutral, with a pH of seven.",
+      "focus": 1
+     },
+     {
+      "text": "Above seven is basic, also called alkaline, like soap.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "type": "chart",
+    "heading": "Step 2: Everyday pH values",
+    "chart_title": "pH of everyday liquids",
+    "labels": [
+     "Lemon juice",
+     "Vinegar",
+     "Pure water",
+     "Baking soda",
+     "Bleach"
+    ],
+    "values": [
+     2,
+     3,
+     7,
+     9,
+     12
+    ],
+    "unit": "pH",
+    "narration": [
+     {
+      "text": "Lemon juice is strongly acidic, about pH two.",
+      "focus": 0
+     },
+     {
+      "text": "Pure water sits right in the middle at seven.",
+      "focus": 2
+     },
+     {
+      "text": "Bleach is strongly basic, around pH twelve.",
+      "focus": 4
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 3: Neutralisation",
+    "layout": "flow",
+    "items": [
+     "Acid + base",
+     "They react",
+     "Salt + water"
+    ],
+    "icons": [
+     "🧪",
+     "⚗️",
+     "💧"
+    ],
+    "edge_labels": [
+     "mix",
+     "produce"
+    ],
+    "narration": [
+     {
+      "text": "When an acid meets a base, they react together.",
+      "focus": 0
+     },
+     {
+      "text": "This reaction is called neutralisation.",
+      "focus": 1
+     },
+     {
+      "text": "It produces a salt and water.",
+      "focus": 2
+     },
+     {
+      "text": "Hydrochloric acid and sodium hydroxide make table salt and water."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 4: Calculating pH",
+    "problem": "[H⁺] = 0.001 mol/L. Find the pH.",
+    "steps": [
+     "pH = −log₁₀[H⁺]",
+     "0.001 = 10⁻³",
+     "pH = 3"
+    ],
+    "answer": "pH 3 (acidic)",
+    "narration": [
+     {
+      "text": "pH is the negative log of the hydrogen ion concentration.",
+      "focus": 0
+     },
+     {
+      "text": "Zero point zero zero one is ten to the minus three.",
+      "focus": 1
+     },
+     {
+      "text": "So the pH is three, which is acidic.",
+      "focus": 2
+     },
+     {
+      "text": "Each step of one pH unit is a tenfold change in acidity."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "table",
+    "heading": "Step 9: Acids and bases side by side",
+    "columns": [
+     "Property",
+     "Acid",
+     "Base"
+    ],
+    "rows": [
+     [
+      "Taste",
+      "Sour",
+      "Bitter"
+     ],
+     [
+      "pH",
+      "Below 7",
+      "Above 7"
+     ],
+     [
+      "Blue litmus",
+      "Turns red",
+      "Stays blue"
+     ],
+     [
+      "Example",
+      "Lemon juice",
+      "Soap"
+     ]
+    ],
+    "narration": [
+     {
+      "text": "Acids taste sour, while bases taste bitter. Never taste chemicals in the lab!",
+      "focus": 0
+     },
+     {
+      "text": "Acids have a pH below seven, and bases above seven.",
+      "focus": 1
+     },
+     {
+      "text": "Acids turn blue litmus paper red.",
+      "focus": 2
+     },
+     {
+      "text": "Lemon juice is an acid, and soap is a base.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What is the pH of pure water?",
+    "options": [
+     "7",
+     "1",
+     "14"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What is the pH of pure water?"
+     },
+     {
+      "text": "Seven, which is neutral.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What does neutralisation produce?",
+    "options": [
+     "A salt and water",
+     "Only a gas",
+     "A stronger acid"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What does an acid and a base make?"
+     },
+     {
+      "text": "A salt and water.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "pH 3 is how many times more acidic than pH 5?",
+    "options": [
+     "100 times",
+     "2 times",
+     "10 times"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Compare pH three with pH five."
+     },
+     {
+      "text": "One hundred times: two steps, each ten times.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,264 @@
+{
+ "id": "newtons_laws",
+ "domain": "physics",
+ "keywords": "newton newtons motion force forces inertia acceleration mass action reaction momentum friction",
+ "facts": [
+  "First law: an object stays at rest or keeps moving at constant velocity unless a net force acts (inertia).",
+  "Second law: F = m × a; force in newtons, mass in kg, acceleration in m/s².",
+  "Third law: every action has an equal and opposite reaction.",
+  "Net force is the sum of all forces; friction opposes motion."
+ ],
+ "prerequisites": [
+  "Speed and velocity",
+  "Mass and weight"
+ ],
+ "next_topics": [
+  "Momentum",
+  "Friction",
+  "Gravity"
+ ],
+ "lesson": {
+  "title": "Newton's laws of motion",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "Newton's three laws of motion",
+    "subtitle": "How forces change motion",
+    "narration": [
+     {
+      "text": "Isaac Newton described three simple rules for how things move."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: The three laws",
+    "layout": "stack",
+    "items": [
+     "1. Inertia",
+     "2. F = m × a",
+     "3. Action and reaction"
+    ],
+    "icons": [
+     "⚽",
+     "🏋️",
+     "🚀"
+    ],
+    "narration": [
+     {
+      "text": "First law: an object stays still or keeps moving unless a force acts on it.",
+      "focus": 0
+     },
+     {
+      "text": "Second law: force equals mass times acceleration.",
+      "focus": 1
+     },
+     {
+      "text": "Third law: every action has an equal and opposite reaction.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 2: A rocket launch",
+    "layout": "flow",
+    "items": [
+     "Engine pushes gas down",
+     "Gas pushes rocket up",
+     "Rocket speeds up"
+    ],
+    "icons": [
+     "🔥",
+     "⬆️",
+     "🚀"
+    ],
+    "edge_labels": [
+     "reaction",
+     "net force"
+    ],
+    "narration": [
+     {
+      "text": "The rocket engine pushes hot gas downward.",
+      "focus": 0
+     },
+     {
+      "text": "The gas pushes the rocket upward with an equal force. That is the third law.",
+      "focus": 1
+     },
+     {
+      "text": "The upward force is bigger than its weight, so it speeds up.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "worked_example",
+    "heading": "Step 3: Using F = m × a",
+    "problem": "A 2 kg ball is pushed with a 10 N force. Find its acceleration.",
+    "steps": [
+     "a = F ÷ m",
+     "a = 10 ÷ 2",
+     "a = 5 m/s²"
+    ],
+    "answer": "5 m/s²",
+    "narration": [
+     {
+      "text": "Rearrange the second law: acceleration equals force divided by mass.",
+      "focus": 0
+     },
+     {
+      "text": "Put in ten newtons and two kilograms.",
+      "focus": 1
+     },
+     {
+      "text": "The ball speeds up by five metres per second, every second.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 3: Net force with friction",
+    "problem": "A 1,000 kg car: 3,000 N engine force, 1,000 N friction. Find a.",
+    "steps": [
+     "Net force = 3000 − 1000 = 2000 N",
+     "a = F ÷ m = 2000 ÷ 1000",
+     "a = 2 m/s²"
+    ],
+    "answer": "2 m/s²",
+    "narration": [
+     {
+      "text": "Friction pushes backwards, so subtract it: the net force is two thousand newtons.",
+      "focus": 0
+     },
+     {
+      "text": "Divide the net force by the mass of one thousand kilograms.",
+      "focus": 1
+     },
+     {
+      "text": "The car accelerates at two metres per second squared.",
+      "focus": 2
+     },
+     {
+      "text": "If the forces were equal, the net force would be zero and speed would stay constant."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 9: Common mistake: action and reaction",
+    "layout": "flow",
+    "items": [
+     "You push the wall",
+     "The wall pushes you",
+     "Equal and opposite",
+     "On different objects"
+    ],
+    "icons": [
+     "🤚",
+     "🧱",
+     "⚖️",
+     "↔️"
+    ],
+    "edge_labels": [
+     "at the same time",
+     "same size",
+     "so they don't cancel"
+    ],
+    "narration": [
+     {
+      "text": "When you push a wall, the wall pushes back on you.",
+      "focus": 1
+     },
+     {
+      "text": "The two forces are equal in size and opposite in direction.",
+      "focus": 2
+     },
+     {
+      "text": "They act on different objects, so they do not cancel each other out.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "A ball rolls on a smooth, flat floor. Why does it keep moving?",
+    "options": [
+     "Inertia: almost no force stops it",
+     "The floor pushes it forward",
+     "Gravity pulls it forward"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Why does a ball keep rolling on a smooth floor?"
+     },
+     {
+      "text": "Inertia. With almost no force to stop it, it keeps moving.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "The same force pushes a 1 kg cart and a 4 kg cart. Which accelerates more?",
+    "options": [
+     "The 1 kg cart",
+     "The 4 kg cart",
+     "Both equally"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Which cart speeds up more?"
+     },
+     {
+      "text": "The one kilogram cart. Less mass means more acceleration for the same force.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "If the net force on a moving object is zero, it will…",
+    "options": [
+     "Keep moving at constant velocity",
+     "Slow down and stop",
+     "Speed up"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What happens when the net force is zero?"
+     },
+     {
+      "text": "It keeps moving at a constant velocity. That is the first law.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

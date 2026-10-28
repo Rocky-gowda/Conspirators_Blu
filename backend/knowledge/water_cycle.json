@@ -1,0 +1,322 @@
+{
+ "id": "water_cycle",
+ "domain": "earth",
+ "keywords": "water cycle rain evaporation condensation precipitation cloud clouds vapour vapor transpiration runoff hydrological",
+ "facts": [
+  "The sun heats water, which evaporates into vapour.",
+  "Vapour cools high up and condenses into clouds.",
+  "Precipitation is rain, snow, sleet or hail.",
+  "Plants release vapour through transpiration; water soaks in (infiltration) or runs off.",
+  "About 96.5% of Earth's water is in the oceans; most fresh water is ice or groundwater."
+ ],
+ "prerequisites": [
+  "States of matter",
+  "Heat and temperature"
+ ],
+ "next_topics": [
+  "Weather and climate",
+  "Groundwater",
+  "Clouds"
+ ],
+ "lesson": {
+  "title": "The water cycle",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "The water cycle",
+    "subtitle": "How water moves around the Earth",
+    "narration": [
+     {
+      "text": "Water keeps moving between the sea, the sky and the land, again and again."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "illustration",
+    "heading": "Step 1: Water on the move",
+    "parts": [
+     {
+      "art": "cloud",
+      "label": "Clouds",
+      "role": "main"
+     },
+     {
+      "art": "sun",
+      "label": "Sun's heat",
+      "role": "in",
+      "via": "warms the sea"
+     },
+     {
+      "art": "sea",
+      "label": "Seas and lakes",
+      "role": "in",
+      "via": "evaporation"
+     },
+     {
+      "art": "rain",
+      "label": "Rain and snow",
+      "role": "out",
+      "via": "precipitation"
+     },
+     {
+      "art": "mountain",
+      "label": "Rivers flow back",
+      "role": "out",
+      "via": "collection"
+     }
+    ],
+    "narration": [
+     {
+      "text": "The sun's heat warms the water in seas and lakes.",
+      "focus": 1
+     },
+     {
+      "text": "The water turns into vapour and rises into the sky.",
+      "focus": 2
+     },
+     {
+      "text": "High up, the vapour cools and forms clouds.",
+      "focus": 0
+     },
+     {
+      "text": "Heavy clouds drop the water as rain or snow.",
+      "focus": 3
+     },
+     {
+      "text": "Rivers carry it back to the sea, and the cycle starts again.",
+      "focus": 4
+     }
+    ],
+    "short": [
+     {
+      "text": "The sun heats seas and lakes, and the water rises as vapour.",
+      "focus": 2
+     },
+     {
+      "text": "It cools into clouds, falls as rain, and rivers carry it back.",
+      "focus": 4
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: Four stages",
+    "layout": "cycle",
+    "items": [
+     "Evaporation",
+     "Condensation",
+     "Precipitation",
+     "Collection"
+    ],
+    "icons": [
+     "☀️",
+     "☁️",
+     "🌧️",
+     "🌊"
+    ],
+    "edge_labels": [
+     "vapour rises",
+     "clouds get heavy",
+     "flows to the sea",
+     "sun heats again"
+    ],
+    "narration": [
+     {
+      "text": "The sun heats water in seas and lakes, and it turns into vapour.",
+      "focus": 0
+     },
+     {
+      "text": "High in the sky, the vapour cools and forms clouds.",
+      "focus": 1
+     },
+     {
+      "text": "When clouds get heavy, water falls as rain or snow.",
+      "focus": 2
+     },
+     {
+      "text": "The water collects in rivers and seas, and the cycle starts again.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 2: Other paths for water",
+    "layout": "stack",
+    "items": [
+     "Transpiration: plants release vapour",
+     "Infiltration: water soaks into soil",
+     "Runoff: water flows over land"
+    ],
+    "icons": [
+     "🌿",
+     "🟫",
+     "🏞️"
+    ],
+    "narration": [
+     {
+      "text": "Plants release water vapour from their leaves. This is transpiration.",
+      "focus": 0
+     },
+     {
+      "text": "Some rain soaks into the ground and becomes groundwater.",
+      "focus": 1
+     },
+     {
+      "text": "The rest runs over land into rivers. This is runoff.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "chart",
+    "heading": "Step 3: Where Earth's water is",
+    "chart_title": "Share of all water on Earth",
+    "labels": [
+     "Oceans",
+     "Ice and glaciers",
+     "Groundwater",
+     "Lakes and rivers"
+    ],
+    "values": [
+     96.5,
+     1.7,
+     1.7,
+     0.01
+    ],
+    "unit": "%",
+    "narration": [
+     {
+      "text": "About ninety-six and a half percent of Earth's water is salty ocean water.",
+      "focus": 0
+     },
+     {
+      "text": "Most fresh water is locked in ice or hidden underground.",
+      "focus": 1
+     },
+     {
+      "text": "Lakes and rivers hold only a tiny fraction.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 9: What drives the cycle",
+    "layout": "hub",
+    "items": [
+     "The water cycle",
+     "Sun's heat: evaporation",
+     "Cooling: condensation",
+     "Gravity: precipitation"
+    ],
+    "icons": [
+     "🔄",
+     "☀️",
+     "☁️",
+     "🌧️"
+    ],
+    "narration": [
+     {
+      "text": "Two forces keep water moving around the cycle.",
+      "focus": 0
+     },
+     {
+      "text": "The sun's heat gives water the energy to evaporate.",
+      "focus": 1
+     },
+     {
+      "text": "As the vapour rises it cools and condenses into clouds.",
+      "focus": 2
+     },
+     {
+      "text": "Gravity then pulls the water back down as rain or snow.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What do we call water vapour cooling into clouds?",
+    "options": [
+     "Evaporation",
+     "Condensation",
+     "Precipitation"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What do we call vapour turning into clouds?"
+     },
+     {
+      "text": "Condensation. The vapour cools into tiny water drops.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What is transpiration?",
+    "options": [
+     "Plants releasing water vapour",
+     "Rain soaking into soil",
+     "Water freezing"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What is transpiration?"
+     },
+     {
+      "text": "Plants releasing water vapour from their leaves.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Where is most of Earth's fresh water?",
+    "options": [
+     "In ice and underground",
+     "In rivers",
+     "In the air"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Where is most fresh water stored?"
+     },
+     {
+      "text": "In ice and underground, not in rivers and lakes.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

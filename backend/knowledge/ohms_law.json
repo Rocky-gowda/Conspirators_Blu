@@ -1,0 +1,291 @@
+{
+ "id": "ohms_law",
+ "domain": "physics",
+ "keywords": "ohm ohms voltage current resistance circuit circuits electricity electric volt volts ampere amperes resistor resistors series",
+ "facts": [
+  "Ohm's law: V = I × R (voltage = current × resistance).",
+  "Voltage is measured in volts (V), current in amperes (A), resistance in ohms (Ω).",
+  "For a fixed resistor, current is proportional to voltage.",
+  "Resistances in series add: R = R1 + R2.",
+  "Electrical power P = V × I, measured in watts."
+ ],
+ "prerequisites": [
+  "Electric charge",
+  "Simple circuits"
+ ],
+ "next_topics": [
+  "Series and parallel circuits",
+  "Electrical power",
+  "Kirchhoff's laws"
+ ],
+ "lesson": {
+  "title": "Ohm's law",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "Ohm's law",
+    "subtitle": "Voltage, current and resistance",
+    "narration": [
+     {
+      "text": "Ohm's law tells us how voltage, current and resistance are linked in a circuit."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: Three quantities",
+    "layout": "stack",
+    "items": [
+     "Voltage (V): the push",
+     "Current (I): the flow",
+     "Resistance (R): the opposition"
+    ],
+    "icons": [
+     "🔋",
+     "⚡",
+     "🧱"
+    ],
+    "narration": [
+     {
+      "text": "Voltage is the electric push from a battery, measured in volts.",
+      "focus": 0
+     },
+     {
+      "text": "Current is the flow of charge, measured in amperes.",
+      "focus": 1
+     },
+     {
+      "text": "Resistance slows the flow down, and it is measured in ohms.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 2: The rule",
+    "layout": "stack",
+    "items": [
+     "V = I × R",
+     "I = V ÷ R",
+     "R = V ÷ I"
+    ],
+    "narration": [
+     {
+      "text": "Voltage equals current times resistance.",
+      "focus": 0
+     },
+     {
+      "text": "So current equals voltage divided by resistance.",
+      "focus": 1
+     },
+     {
+      "text": "And resistance equals voltage divided by current.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "diagram",
+    "heading": "Step 3: An example",
+    "layout": "flow",
+    "items": [
+     "6 V battery",
+     "3 Ω resistor",
+     "Current: 2 A"
+    ],
+    "icons": [
+     "🔋",
+     "🧱",
+     "⚡"
+    ],
+    "edge_labels": [
+     "pushes through",
+     "6 ÷ 3"
+    ],
+    "narration": [
+     {
+      "text": "Take a six volt battery.",
+      "focus": 0
+     },
+     {
+      "text": "Connect it across a three ohm resistor.",
+      "focus": 1
+     },
+     {
+      "text": "The current is six divided by three, which is two amperes.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "chart",
+    "heading": "Step 3: Voltage and current go together",
+    "chart_title": "Current through a 2 Ω resistor",
+    "labels": [
+     "2 V",
+     "4 V",
+     "6 V",
+     "8 V"
+    ],
+    "values": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "unit": "A",
+    "narration": [
+     {
+      "text": "With a two ohm resistor, two volts gives one ampere.",
+      "focus": 0
+     },
+     {
+      "text": "Six volts gives three amperes.",
+      "focus": 2
+     },
+     {
+      "text": "Eight volts gives four. Doubling the voltage doubles the current.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "worked_example",
+    "heading": "Step 4: Find the resistance",
+    "problem": "A 12 V battery drives 3 A through a bulb. Find R.",
+    "steps": [
+     "R = V ÷ I",
+     "R = 12 ÷ 3",
+     "R = 4 Ω"
+    ],
+    "answer": "4 ohms",
+    "narration": [
+     {
+      "text": "Use resistance equals voltage divided by current.",
+      "focus": 0
+     },
+     {
+      "text": "Put in twelve volts and three amperes.",
+      "focus": 1
+     },
+     {
+      "text": "Twelve divided by three gives four ohms.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 4: Resistors in series",
+    "problem": "2 Ω and 4 Ω in series on a 12 V supply. Find I and the power.",
+    "steps": [
+     "R total = 2 + 4 = 6 Ω",
+     "I = V ÷ R = 12 ÷ 6",
+     "I = 2 A",
+     "P = V × I = 12 × 2 = 24 W"
+    ],
+    "answer": "I = 2 A, P = 24 W",
+    "narration": [
+     {
+      "text": "In series, resistances add: two plus four is six ohms.",
+      "focus": 0
+     },
+     {
+      "text": "Current equals voltage divided by total resistance.",
+      "focus": 1
+     },
+     {
+      "text": "Twelve divided by six gives two amperes.",
+      "focus": 2
+     },
+     {
+      "text": "Power is voltage times current: twenty-four watts.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Ten volts across a five ohm resistor. What is the current?",
+    "options": [
+     "2 A",
+     "5 A",
+     "50 A"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Ten volts across five ohms. What is the current?"
+     },
+     {
+      "text": "Two amperes, because ten divided by five is two.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "A 9 V battery and a 3 Ω resistor. What is the current?",
+    "options": [
+     "3 A",
+     "27 A",
+     "6 A"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Nine volts across three ohms gives what current?"
+     },
+     {
+      "text": "Three amperes: nine divided by three.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Two 6 Ω resistors in series on 12 V. What is the current?",
+    "options": [
+     "1 A",
+     "2 A",
+     "4 A"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Two six ohm resistors in series on twelve volts?"
+     },
+     {
+      "text": "One ampere: the total is twelve ohms, and twelve divided by twelve is one.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

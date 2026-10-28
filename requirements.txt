@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic>=2
+requests
+numpy
+soundfile
+playwright
+kokoro-onnx
+torch
+transformers==4.46.1
+sentencepiece
+indic-nlp-library
+pypdf
+psutil
+symspellpy

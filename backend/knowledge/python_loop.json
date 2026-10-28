@@ -1,0 +1,268 @@
+{
+ "id": "python_loop",
+ "domain": "programming",
+ "keywords": "python loop loops for while range iterate iteration repeat print break continue",
+ "facts": [
+  "A for loop runs its body once for each item in a sequence.",
+  "range(n) gives the numbers 0 up to n minus 1; range(start, stop, step) never includes stop.",
+  "The loop body is the indented block under the for line.",
+  "A while loop repeats as long as its condition is true.",
+  "break leaves a loop immediately; continue skips to the next pass."
+ ],
+ "prerequisites": [
+  "Variables",
+  "Lists"
+ ],
+ "next_topics": [
+  "While loops",
+  "Functions",
+  "Nested loops"
+ ],
+ "lesson": {
+  "title": "How a Python loop works",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "How does a Python loop work?",
+    "subtitle": "Repeat an instruction for every value",
+    "narration": [
+     {
+      "text": "A loop repeats the same instruction for each value in a sequence."
+     }
+    ]
+   },
+   {
+    "type": "code_walkthrough",
+    "heading": "Step 1: Read the code",
+    "code": "for i in range(3):\n    print(i)",
+    "code_language": "python",
+    "output": [
+     "0",
+     "1",
+     "2"
+    ],
+    "narration": [
+     {
+      "text": "The first line says: for each value i in range of three.",
+      "focus": 1
+     },
+     {
+      "text": "Range of three gives three values: zero, one and two.",
+      "focus": 1
+     },
+     {
+      "text": "The indented line is the body. It runs once for every value.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 2: Watch each pass",
+    "layout": "flow",
+    "items": [
+     "i = 0 → print 0",
+     "i = 1 → print 1",
+     "i = 2 → print 2",
+     "Loop ends"
+    ],
+    "icons": [
+     "0️⃣",
+     "1️⃣",
+     "2️⃣",
+     "🏁"
+    ],
+    "edge_labels": [
+     "next value",
+     "next value",
+     "none left"
+    ],
+    "narration": [
+     {
+      "text": "On the first pass, i is zero, so it prints zero.",
+      "focus": 0
+     },
+     {
+      "text": "Next, i becomes one, and it prints one.",
+      "focus": 1
+     },
+     {
+      "text": "Then i becomes two, and it prints two.",
+      "focus": 2
+     },
+     {
+      "text": "There are no values left, so the loop stops.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "code_walkthrough",
+    "heading": "Step 3: A loop with a condition",
+    "code": "total = 0\nfor n in [4, 7, 9]:\n    if n % 2 == 1:\n        total += n\nprint(total)",
+    "output": [
+     "16"
+    ],
+    "narration": [
+     {
+      "text": "We start a running total at zero.",
+      "focus": 1
+     },
+     {
+      "text": "The loop takes each number from the list in turn.",
+      "focus": 2
+     },
+     {
+      "text": "The if line keeps only odd numbers, where n mod two is one.",
+      "focus": 3
+     },
+     {
+      "text": "Seven and nine are odd, so the total becomes sixteen.",
+      "focus": 5
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "code_walkthrough",
+    "heading": "Step 4: While loops and break",
+    "code": "n = 10\nwhile n > 0:\n    if n == 4:\n        break\n    n -= 3\nprint(n)",
+    "output": [
+     "4"
+    ],
+    "narration": [
+     {
+      "text": "A while loop repeats as long as its condition is true.",
+      "focus": 2
+     },
+     {
+      "text": "Each pass subtracts three: ten, seven, then four.",
+      "focus": 5
+     },
+     {
+      "text": "Break stops the loop at once, even though n is still above zero.",
+      "focus": 4
+     },
+     {
+      "text": "So the program prints four.",
+      "focus": 6
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 9: Common mistake: off by one",
+    "layout": "flow",
+    "items": [
+     "range(5)",
+     "0, 1, 2, 3, 4",
+     "Five values",
+     "5 is not included"
+    ],
+    "icons": [
+     "🔢",
+     "📋",
+     "✋",
+     "🚫"
+    ],
+    "edge_labels": [
+     "gives",
+     "that is",
+     "but"
+    ],
+    "narration": [
+     {
+      "text": "Range of five starts at zero.",
+      "focus": 0
+     },
+     {
+      "text": "It gives zero, one, two, three and four.",
+      "focus": 1
+     },
+     {
+      "text": "That is five values, but the number five itself is never included.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "How many times does print run for range(3)?",
+    "options": [
+     "2 times",
+     "3 times",
+     "4 times"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. How many times does print run?"
+     },
+     {
+      "text": "Three times: once each for zero, one and two.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What does the odd-number loop print for [4, 7, 9]?",
+    "options": [
+     "20",
+     "16",
+     "9"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. Which total does the loop print?"
+     },
+     {
+      "text": "Sixteen: seven plus nine. Four is even, so it is skipped.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Which values does range(1, 10, 3) give?",
+    "options": [
+     "1, 4, 7",
+     "1, 3, 6, 9",
+     "1, 4, 7, 10"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What does range one to ten, step three, give?"
+     },
+     {
+      "text": "One, four and seven. The stop value ten is never included.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

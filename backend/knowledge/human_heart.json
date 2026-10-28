@@ -1,0 +1,319 @@
+{
+ "id": "human_heart",
+ "domain": "biology",
+ "keywords": "heart human cardiac blood circulation chamber chambers atrium ventricle valve valves pump pulse heartbeat",
+ "facts": [
+  "The heart has four chambers: two atria on top and two ventricles below.",
+  "The right side pumps oxygen-poor blood to the lungs; the left side pumps oxygen-rich blood to the body.",
+  "Valves stop blood flowing backwards; their closing makes the lub-dub sound.",
+  "Each beat starts at the SA node, the natural pacemaker.",
+  "The left ventricle has the thickest wall because it pumps blood to the whole body."
+ ],
+ "prerequisites": [
+  "Cells and tissues",
+  "Blood"
+ ],
+ "next_topics": [
+  "Blood vessels",
+  "Respiratory system",
+  "Blood pressure"
+ ],
+ "lesson": {
+  "title": "How the human heart works",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "How does the human heart work?",
+    "subtitle": "A pump with four rooms",
+    "narration": [
+     {
+      "text": "Your heart is a muscle that pumps blood around your whole body."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: Four chambers",
+    "layout": "hub",
+    "items": [
+     "Heart",
+     "Right atrium",
+     "Right ventricle",
+     "Left atrium",
+     "Left ventricle"
+    ],
+    "icons": [
+     "❤️",
+     "🔵",
+     "🔵",
+     "🔴",
+     "🔴"
+    ],
+    "narration": [
+     {
+      "text": "The heart has four chambers.",
+      "focus": 0
+     },
+     {
+      "text": "The right atrium collects blood returning from the body.",
+      "focus": 1
+     },
+     {
+      "text": "The right ventricle pumps it to the lungs.",
+      "focus": 2
+     },
+     {
+      "text": "The left atrium receives fresh blood from the lungs.",
+      "focus": 3
+     },
+     {
+      "text": "The left ventricle pumps it out to the whole body.",
+      "focus": 4
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 2: The path of blood",
+    "layout": "cycle",
+    "items": [
+     "Body",
+     "Right side of heart",
+     "Lungs",
+     "Left side of heart"
+    ],
+    "icons": [
+     "🧍",
+     "💙",
+     "🫁",
+     "❤️"
+    ],
+    "edge_labels": [
+     "returns",
+     "pumped",
+     "oxygen-rich",
+     "pumped out"
+    ],
+    "narration": [
+     {
+      "text": "Blood low in oxygen returns from the body.",
+      "focus": 0
+     },
+     {
+      "text": "The right side pumps it to the lungs.",
+      "focus": 1
+     },
+     {
+      "text": "In the lungs, blood picks up oxygen and drops carbon dioxide.",
+      "focus": 2
+     },
+     {
+      "text": "The left side pumps oxygen-rich blood back to the body.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 3: Valves keep blood moving one way",
+    "layout": "flow",
+    "items": [
+     "Atrium squeezes",
+     "Valve opens",
+     "Ventricle squeezes",
+     "Valve shuts"
+    ],
+    "icons": [
+     "💪",
+     "🚪",
+     "💪",
+     "🔒"
+    ],
+    "narration": [
+     {
+      "text": "First, an atrium squeezes and pushes blood down.",
+      "focus": 0
+     },
+     {
+      "text": "A valve opens to let blood into the ventricle.",
+      "focus": 1
+     },
+     {
+      "text": "When the ventricle squeezes, the valve shuts so blood cannot flow back.",
+      "focus": 3
+     },
+     {
+      "text": "The lub-dub sound of a heartbeat is the valves closing."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "timeline",
+    "heading": "Step 4: One heartbeat, step by step",
+    "events": [
+     {
+      "label": "SA node",
+      "text": "The natural pacemaker fires an electrical signal"
+     },
+     {
+      "label": "Atria",
+      "text": "Atria contract and fill the ventricles"
+     },
+     {
+      "label": "AV node",
+      "text": "The signal pauses briefly, then passes down"
+     },
+     {
+      "label": "Ventricles",
+      "text": "Ventricles contract: blood to lungs and body"
+     },
+     {
+      "label": "Relax",
+      "text": "The muscle relaxes and the chambers refill"
+     }
+    ],
+    "narration": [
+     {
+      "text": "Each beat starts at the SA node, the heart's natural pacemaker.",
+      "focus": 0
+     },
+     {
+      "text": "The AV node delays the signal so the atria finish emptying.",
+      "focus": 2
+     },
+     {
+      "text": "Then the ventricles contract and push blood out.",
+      "focus": 3
+     },
+     {
+      "text": "Finally the muscle relaxes and the chambers refill.",
+      "focus": 4
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 9: Heart rate and exercise",
+    "layout": "flow",
+    "items": [
+     "You exercise",
+     "Muscles need more oxygen",
+     "Heart beats faster",
+     "More blood reaches muscles"
+    ],
+    "icons": [
+     "🏃",
+     "💪",
+     "💓",
+     "🩸"
+    ],
+    "edge_labels": [
+     "so",
+     "so",
+     "so"
+    ],
+    "narration": [
+     {
+      "text": "When you run or play, your muscles work harder.",
+      "focus": 0
+     },
+     {
+      "text": "Working muscles need more oxygen and glucose.",
+      "focus": 1
+     },
+     {
+      "text": "So the heart beats faster and pumps more blood each minute.",
+      "focus": 2
+     },
+     {
+      "text": "A resting adult heart usually beats about sixty to one hundred times a minute.",
+      "focus": 2
+     },
+     {
+      "text": "Faster blood flow brings the muscles the oxygen they need.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Which chamber pumps blood to the whole body?",
+    "options": [
+     "Right atrium",
+     "Left ventricle",
+     "Right ventricle"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. Which chamber pumps blood to the body?"
+     },
+     {
+      "text": "The left ventricle. It has the thickest, strongest wall.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What do heart valves do?",
+    "options": [
+     "Stop blood flowing backwards",
+     "Make blood red",
+     "Add oxygen to blood"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What is the job of the valves?"
+     },
+     {
+      "text": "They stop blood from flowing backwards.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What starts each heartbeat?",
+    "options": [
+     "The SA node",
+     "The lungs",
+     "The left atrium"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. What starts each heartbeat?"
+     },
+     {
+      "text": "The SA node, the heart's built-in pacemaker.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

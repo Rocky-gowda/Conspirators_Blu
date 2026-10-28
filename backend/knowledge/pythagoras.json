@@ -1,0 +1,241 @@
+{
+ "id": "pythagoras",
+ "domain": "math",
+ "keywords": "pythagoras pythagorean theorem hypotenuse right triangle triangles right-angled",
+ "facts": [
+  "In a right triangle, a² + b² = c², where c is the hypotenuse.",
+  "The hypotenuse is the longest side, opposite the right angle.",
+  "3, 4, 5 and 5, 12, 13 are Pythagorean triples.",
+  "To find a short side: b² = c² − a².",
+  "If a² + b² = c² holds, the triangle has a right angle."
+ ],
+ "prerequisites": [
+  "Squares and square roots",
+  "Triangles"
+ ],
+ "next_topics": [
+  "Distance formula",
+  "Trigonometry",
+  "Area of triangles"
+ ],
+ "lesson": {
+  "title": "The Pythagorean theorem",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "The Pythagorean theorem",
+    "subtitle": "The sides of a right triangle",
+    "narration": [
+     {
+      "text": "In a right triangle, the three sides are linked by one simple rule."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: Name the sides",
+    "layout": "stack",
+    "items": [
+     "a and b: the two shorter sides",
+     "c: hypotenuse, opposite the right angle"
+    ],
+    "icons": [
+     "📏",
+     "📐"
+    ],
+    "narration": [
+     {
+      "text": "The two sides that meet at the right angle are called a and b.",
+      "focus": 0
+     },
+     {
+      "text": "The longest side, opposite the right angle, is the hypotenuse, c.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "type": "worked_example",
+    "heading": "Step 2: The rule",
+    "problem": "a = 3, b = 4. Find c.",
+    "steps": [
+     "a² + b² = c²",
+     "3² + 4² = 9 + 16 = 25",
+     "c = √25 = 5"
+    ],
+    "answer": "c = 5",
+    "narration": [
+     {
+      "text": "The rule: a squared plus b squared equals c squared.",
+      "focus": 0
+     },
+     {
+      "text": "Three squared is nine, four squared is sixteen, and they add to twenty-five.",
+      "focus": 1
+     },
+     {
+      "text": "The square root of twenty-five is five, so c is five.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 3: Find a shorter side",
+    "problem": "c = 13, a = 5. Find b.",
+    "steps": [
+     "b² = c² − a²",
+     "b² = 169 − 25 = 144",
+     "b = √144 = 12"
+    ],
+    "answer": "b = 12",
+    "narration": [
+     {
+      "text": "To find a shorter side, subtract instead: b squared equals c squared minus a squared.",
+      "focus": 0
+     },
+     {
+      "text": "One hundred sixty-nine minus twenty-five is one hundred forty-four.",
+      "focus": 1
+     },
+     {
+      "text": "The square root of one hundred forty-four is twelve.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 4: Test for a right angle",
+    "problem": "Sides 7, 24 and 25. Is it a right triangle?",
+    "steps": [
+     "7² + 24² = 49 + 576",
+     "= 625",
+     "25² = 625 → equal, so yes"
+    ],
+    "answer": "Yes, it has a right angle",
+    "narration": [
+     {
+      "text": "The theorem also works backwards, as a test.",
+      "focus": 0
+     },
+     {
+      "text": "Seven squared plus twenty-four squared is six hundred twenty-five.",
+      "focus": 1
+     },
+     {
+      "text": "Twenty-five squared is also six hundred twenty-five, so the angle is a right angle.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "worked_example",
+    "heading": "Step 9: Is it a right triangle?",
+    "problem": "A triangle has sides 6 cm, 8 cm and 10 cm. Is it right-angled?",
+    "steps": [
+     "Square the two shorter sides: 36 + 64 = 100",
+     "Square the longest side: 10 × 10 = 100",
+     "Both are equal"
+    ],
+    "answer": "Yes, it is a right triangle",
+    "narration": [
+     {
+      "text": "We can use the theorem backwards to test a triangle."
+     },
+     {
+      "text": "Six squared plus eight squared is one hundred.",
+      "focus": 0
+     },
+     {
+      "text": "Ten squared is also one hundred.",
+      "focus": 1
+     },
+     {
+      "text": "They match, so the angle between the short sides is a right angle.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "a = 6 and b = 8. What is c?",
+    "options": [
+     "10",
+     "14",
+     "48"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Six and eight are the short sides. What is c?"
+     },
+     {
+      "text": "Ten: thirty-six plus sixty-four is one hundred, and its root is ten.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "c = 10 and a = 6. What is b?",
+    "options": [
+     "8",
+     "4",
+     "16"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. The hypotenuse is ten and one side is six."
+     },
+     {
+      "text": "Eight: one hundred minus thirty-six is sixty-four.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Which set of sides makes a right triangle?",
+    "options": [
+     "5, 12, 13",
+     "4, 5, 6",
+     "2, 3, 4"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Which set makes a right triangle?"
+     },
+     {
+      "text": "Five, twelve and thirteen: twenty-five plus one hundred forty-four is one hundred sixty-nine.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

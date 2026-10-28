@@ -1,0 +1,314 @@
+{
+ "id": "circle",
+ "domain": "math",
+ "keywords": "circle circles radius diameter circumference chord arc pi centre center",
+ "facts": [
+  "Every point on a circle is the same distance from its centre; that distance is the radius.",
+  "The diameter is a line through the centre from edge to edge; it is twice the radius (d = 2r).",
+  "The circumference is the distance around the circle: C = 2 × pi × r.",
+  "The area of a circle is pi × r × r (pi r squared).",
+  "Pi is about 3.14, or 22/7; it is the same for every circle.",
+  "A chord joins two points on the circle; an arc is part of the circumference."
+ ],
+ "prerequisites": [
+  "Lines and points",
+  "Multiplication"
+ ],
+ "next_topics": [
+  "Area of a ring",
+  "Sectors and arcs",
+  "Cylinders"
+ ],
+ "lesson": {
+  "title": "What is a circle?",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "What is a circle?",
+    "subtitle": "Every point the same distance from the centre",
+    "art": [
+     "coin",
+     "clock",
+     "earth"
+    ],
+    "narration": [
+     {
+      "text": "Wheels, coins and clocks are all circles. Let us see what makes a circle."
+     }
+    ]
+   },
+   {
+    "type": "shape",
+    "heading": "Step 1: The parts of a circle",
+    "shape": "circle",
+    "parts": [
+     {
+      "part": "centre",
+      "label": "centre O"
+     },
+     {
+      "part": "radius",
+      "label": "radius r"
+     },
+     {
+      "part": "diameter",
+      "label": "diameter d = 2r"
+     },
+     {
+      "part": "circumference",
+      "label": "circumference"
+     }
+    ],
+    "narration": [
+     {
+      "text": "Every circle has a centre, the point right in the middle.",
+      "focus": 0
+     },
+     {
+      "text": "The radius goes from the centre to the edge. It is the same in every direction.",
+      "focus": 1
+     },
+     {
+      "text": "The diameter goes right across, through the centre. It is two radii long.",
+      "focus": 2
+     },
+     {
+      "text": "The circumference is the distance all the way around.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "worked_example",
+    "heading": "Step 2: From radius to diameter",
+    "problem": "A wheel has a radius of 7 cm. What is its diameter?",
+    "steps": [
+     "Diameter = 2 × radius",
+     "Diameter = 2 × 7 cm"
+    ],
+    "answer": "14 cm",
+    "narration": [
+     {
+      "text": "A wheel has a radius of seven centimetres."
+     },
+     {
+      "text": "The diameter is two times the radius.",
+      "focus": 0
+     },
+     {
+      "text": "Two times seven is fourteen, so the diameter is fourteen centimetres.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "shape",
+    "heading": "Step 2: Chord, arc and area",
+    "shape": "circle",
+    "parts": [
+     {
+      "part": "chord",
+      "label": "chord"
+     },
+     {
+      "part": "arc",
+      "label": "arc"
+     },
+     {
+      "part": "area",
+      "label": "area = π r²"
+     }
+    ],
+    "narration": [
+     {
+      "text": "A chord joins two points on the circle. The diameter is the longest chord.",
+      "focus": 0
+     },
+     {
+      "text": "An arc is a part of the circumference, like a slice of the edge.",
+      "focus": 1
+     },
+     {
+      "text": "The area is the space inside: pi times r times r.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "worked_example",
+    "heading": "Step 3: Circumference with numbers",
+    "problem": "Radius 7 cm. Find the circumference (take π = 22/7).",
+    "steps": [
+     "C = 2 × π × r",
+     "C = 2 × 22/7 × 7",
+     "C = 2 × 22"
+    ],
+    "answer": "44 cm",
+    "narration": [
+     {
+      "text": "Circumference is two times pi times the radius.",
+      "focus": 0
+     },
+     {
+      "text": "Put in pi as twenty-two over seven, and r as seven.",
+      "focus": 1
+     },
+     {
+      "text": "The sevens cancel, leaving two times twenty-two: forty-four centimetres.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 3: Area with numbers",
+    "problem": "Radius 7 cm. Find the area (take π = 22/7).",
+    "steps": [
+     "A = π × r × r",
+     "A = 22/7 × 7 × 7",
+     "A = 22 × 7"
+    ],
+    "answer": "154 cm²",
+    "narration": [
+     {
+      "text": "The area is pi times r times r.",
+      "focus": 0
+     },
+     {
+      "text": "Put in twenty-two over seven, and seven times seven.",
+      "focus": 1
+     },
+     {
+      "text": "One seven cancels, leaving twenty-two times seven: one hundred fifty-four square centimetres.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 4: Why the area is π r²",
+    "layout": "flow",
+    "items": [
+     "Cut into thin slices",
+     "Lay them top to bottom",
+     "Almost a rectangle",
+     "r × πr = πr²"
+    ],
+    "icons": [
+     "🍕",
+     "🔁",
+     "▭",
+     "✅"
+    ],
+    "edge_labels": [
+     "then",
+     "gives",
+     "area"
+    ],
+    "narration": [
+     {
+      "text": "Cut the circle into many thin slices, like a pizza.",
+      "focus": 0
+     },
+     {
+      "text": "Lay them side by side, pointing up and down in turn.",
+      "focus": 1
+     },
+     {
+      "text": "They make almost a rectangle, r tall and half the circumference long.",
+      "focus": 2
+     },
+     {
+      "text": "Half the circumference is pi r, so the area is pi r times r.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "The radius is 5 cm. What is the diameter?",
+    "options": [
+     "5 cm",
+     "10 cm",
+     "25 cm"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. If the radius is five centimetres, what is the diameter?"
+     },
+     {
+      "text": "Ten centimetres: two times the radius.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Radius 7 cm, π = 22/7. What is the circumference?",
+    "options": [
+     "22 cm",
+     "44 cm",
+     "154 cm"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What is the circumference when the radius is seven?"
+     },
+     {
+      "text": "Forty-four centimetres: two times twenty-two over seven times seven.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Radius 7 cm, π = 22/7. What is the area?",
+    "options": [
+     "44 cm²",
+     "154 cm²",
+     "49 cm²"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What is the area when the radius is seven?"
+     },
+     {
+      "text": "One hundred fifty-four square centimetres.",
+      "focus": 1
+     }
+    ]
+   }
+  ]
+ }
+}

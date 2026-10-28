@@ -1,0 +1,318 @@
+{
+ "id": "photosynthesis",
+ "domain": "biology",
+ "keywords": "photosynthesis plant plants leaf leaves chlorophyll chloroplast sunlight glucose oxygen carbon dioxide food calvin",
+ "facts": [
+  "Plants make glucose from carbon dioxide and water using light energy.",
+  "Chlorophyll in chloroplasts absorbs light, mostly red and blue.",
+  "Water is split in the light reactions, releasing oxygen.",
+  "The Calvin cycle in the stroma fixes carbon dioxide into sugar.",
+  "Balanced equation: 6CO2 + 6H2O -> C6H12O6 + 6O2 (with light)."
+ ],
+ "prerequisites": [
+  "Plant cells",
+  "Energy"
+ ],
+ "next_topics": [
+  "Cellular respiration",
+  "Chloroplast structure",
+  "Food chains"
+ ],
+ "lesson": {
+  "title": "How photosynthesis works",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "What is photosynthesis?",
+    "subtitle": "How green plants make their own food",
+    "narration": [
+     {
+      "text": "Photosynthesis is how green plants make their own food using sunlight."
+     }
+    ]
+   },
+   {
+    "type": "illustration",
+    "heading": "Step 1: What a plant takes in and gives out",
+    "parts": [
+     {
+      "art": "plant",
+      "label": "Green plant",
+      "role": "main"
+     },
+     {
+      "art": "sun",
+      "label": "Sunlight",
+      "role": "in",
+      "via": "light energy"
+     },
+     {
+      "art": "water",
+      "label": "Water",
+      "role": "in",
+      "via": "up from the roots"
+     },
+     {
+      "art": "co2",
+      "label": "Carbon dioxide",
+      "role": "in",
+      "via": "into the leaves"
+     },
+     {
+      "art": "glucose",
+      "label": "Glucose (food)",
+      "role": "out",
+      "via": "made in leaves"
+     },
+     {
+      "art": "o2",
+      "label": "Oxygen",
+      "role": "out",
+      "via": "into the air"
+     }
+    ],
+    "narration": [
+     {
+      "text": "A green plant makes its own food in its leaves.",
+      "focus": 0
+     },
+     {
+      "text": "Sunlight gives it the energy.",
+      "focus": 1
+     },
+     {
+      "text": "The roots pull water up from the soil.",
+      "focus": 2
+     },
+     {
+      "text": "The leaves take in carbon dioxide from the air.",
+      "focus": 3
+     },
+     {
+      "text": "From water and carbon dioxide, it makes glucose, its food.",
+      "focus": 4
+     },
+     {
+      "text": "And it releases oxygen into the air.",
+      "focus": 5
+     }
+    ],
+    "short": [
+     {
+      "text": "Sunlight, water from the roots and carbon dioxide go into the leaf.",
+      "focus": 3
+     },
+     {
+      "text": "The plant makes glucose, its food, and gives out oxygen.",
+      "focus": 5
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 2: Inside the leaf",
+    "layout": "flow",
+    "items": [
+     "Chlorophyll traps light",
+     "Water is split",
+     "Sugar is made"
+    ],
+    "icons": [
+     "🍃",
+     "💧",
+     "🍬"
+    ],
+    "edge_labels": [
+     "energy",
+     "with CO₂"
+    ],
+    "narration": [
+     {
+      "text": "Green chlorophyll in the leaf traps the light energy.",
+      "focus": 0
+     },
+     {
+      "text": "This energy splits water, and oxygen is released.",
+      "focus": 1
+     },
+     {
+      "text": "The plant then uses carbon dioxide to make a sugar called glucose.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 3: Two stages",
+    "layout": "flow",
+    "items": [
+     "Light reactions (thylakoids)",
+     "Calvin cycle (stroma)"
+    ],
+    "icons": [
+     "☀️",
+     "🔄"
+    ],
+    "edge_labels": [
+     "ATP + NADPH"
+    ],
+    "narration": [
+     {
+      "text": "Photosynthesis happens in two stages inside the chloroplast."
+     },
+     {
+      "text": "In the light reactions, light makes energy carriers called ATP and NADPH.",
+      "focus": 0
+     },
+     {
+      "text": "In the Calvin cycle, these carriers turn carbon dioxide into glucose.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "worked_example",
+    "heading": "Step 4: The balanced equation",
+    "problem": "Balance: carbon dioxide + water → glucose + oxygen",
+    "steps": [
+     "CO₂ + H₂O → C₆H₁₂O₆ + O₂",
+     "6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂",
+     "Check: 6 C, 12 H, 18 O on each side"
+    ],
+    "answer": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",
+    "narration": [
+     {
+      "text": "Start with carbon dioxide and water making glucose and oxygen.",
+      "focus": 0
+     },
+     {
+      "text": "Six carbon dioxide and six water make one glucose and six oxygen.",
+      "focus": 1
+     },
+     {
+      "text": "Count the atoms: six carbon, twelve hydrogen, eighteen oxygen on each side.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 9: Common mistake: plants also respire",
+    "layout": "flow",
+    "items": [
+     "Daytime: photosynthesis",
+     "Glucose is stored",
+     "Day and night: respiration",
+     "Energy for growth"
+    ],
+    "icons": [
+     "☀️",
+     "🍬",
+     "🌙",
+     "🌱"
+    ],
+    "edge_labels": [
+     "makes",
+     "is used in",
+     "releases"
+    ],
+    "narration": [
+     {
+      "text": "Many people think plants only make food and never use it."
+     },
+     {
+      "text": "In light, photosynthesis makes glucose.",
+      "focus": 0
+     },
+     {
+      "text": "But plants respire all the time, day and night, like animals do.",
+      "focus": 2
+     },
+     {
+      "text": "Respiration breaks down glucose to release energy for growth.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Which gas does a plant take in for photosynthesis?",
+    "options": [
+     "Oxygen",
+     "Carbon dioxide",
+     "Nitrogen"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. Which gas does the plant take in?"
+     },
+     {
+      "text": "Carbon dioxide. Oxygen is the gas it gives out.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Where does the Calvin cycle take place?",
+    "options": [
+     "Stroma of the chloroplast",
+     "Thylakoid membrane",
+     "Cell nucleus"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Where does the Calvin cycle happen?"
+     },
+     {
+      "text": "In the stroma, the fluid inside the chloroplast.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "How many CO₂ molecules make one glucose molecule?",
+    "options": [
+     "1",
+     "6",
+     "12"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. How many carbon dioxide molecules make one glucose?"
+     },
+     {
+      "text": "Six, because glucose has six carbon atoms.",
+      "focus": 1
+     }
+    ]
+   }
+  ]
+ }
+}

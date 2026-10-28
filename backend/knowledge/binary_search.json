@@ -1,0 +1,261 @@
+{
+ "id": "binary_search",
+ "domain": "programming",
+ "keywords": "binary search searching sorted list array algorithm find halving divide logarithmic complexity",
+ "facts": [
+  "Binary search only works on sorted data.",
+  "It compares the target with the middle element.",
+  "Each step throws away half of the remaining items.",
+  "It needs about log2(n) steps, so its time complexity is O(log n).",
+  "For 1,000 items it needs about 10 steps; for 1,000,000 about 20."
+ ],
+ "prerequisites": [
+  "Lists and arrays",
+  "Loops"
+ ],
+ "next_topics": [
+  "Sorting algorithms",
+  "Linear search",
+  "Big O notation"
+ ],
+ "lesson": {
+  "title": "Binary search",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "Binary search",
+    "subtitle": "Find a value fast in a sorted list",
+    "narration": [
+     {
+      "text": "Binary search finds a value in a sorted list by cutting the search in half each time."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: The idea",
+    "layout": "flow",
+    "items": [
+     "Look at the middle",
+     "Target bigger? Go right",
+     "Target smaller? Go left",
+     "Repeat until found"
+    ],
+    "icons": [
+     "🎯",
+     "➡️",
+     "⬅️",
+     "🔁"
+    ],
+    "narration": [
+     {
+      "text": "First, look at the middle item of the list.",
+      "focus": 0
+     },
+     {
+      "text": "If the target is bigger, throw away the left half.",
+      "focus": 1
+     },
+     {
+      "text": "If it is smaller, throw away the right half.",
+      "focus": 2
+     },
+     {
+      "text": "Repeat on the half that is left, until you find it.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "type": "code_walkthrough",
+    "heading": "Step 2: The code",
+    "code_language": "python",
+    "code": "def search(nums, target):\n    low, high = 0, len(nums) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if nums[mid] == target: return mid\n        if nums[mid] < target: low = mid + 1\n        else: high = mid - 1\n    return -1",
+    "narration": [
+     {
+      "text": "Low and high mark the two ends of the search area.",
+      "focus": 2
+     },
+     {
+      "text": "Mid is the middle position. If it holds the target, we return it.",
+      "focus": 5
+     },
+     {
+      "text": "If the middle value is too small, we move low up to search the right half.",
+      "focus": 6
+     },
+     {
+      "text": "Otherwise we move high down to search the left half.",
+      "focus": 7
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 3: Why it is so fast",
+    "layout": "stack",
+    "items": [
+     "8 items → 3 halvings",
+     "1,000 items → about 10",
+     "1,000,000 items → about 20"
+    ],
+    "icons": [
+     "🔢",
+     "📚",
+     "🌍"
+    ],
+    "narration": [
+     {
+      "text": "Each step halves the list, so even huge lists need few steps."
+     },
+     {
+      "text": "Eight items need only three halvings.",
+      "focus": 0
+     },
+     {
+      "text": "A thousand items need about ten steps.",
+      "focus": 1
+     },
+     {
+      "text": "A million items need only about twenty.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "chart",
+    "heading": "Step 4: Linear versus binary",
+    "chart_title": "Checks needed for 1,000 items",
+    "labels": [
+     "Linear search",
+     "Binary search"
+    ],
+    "values": [
+     1000,
+     10
+    ],
+    "unit": "checks",
+    "narration": [
+     {
+      "text": "A linear search may check all one thousand items.",
+      "focus": 0
+     },
+     {
+      "text": "Binary search needs only about ten checks.",
+      "focus": 1
+     },
+     {
+      "text": "We say binary search runs in logarithmic time, written O of log n."
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "worked_example",
+    "heading": "Step 9: Trace a search",
+    "problem": "Find 23 in the sorted list 4, 8, 15, 16, 23, 42",
+    "steps": [
+     "Middle of 6 items (index 2) is 15",
+     "15 is less than 23, so keep the right half: 16, 23, 42",
+     "Middle of the right half (index 4) is 23"
+    ],
+    "answer": "Found at index 4 after only 2 checks",
+    "narration": [
+     {
+      "text": "We search for twenty three in a sorted list of six numbers."
+     },
+     {
+      "text": "The middle item is fifteen, which is too small.",
+      "focus": 0
+     },
+     {
+      "text": "So we throw away the left half and keep sixteen, twenty three and forty two.",
+      "focus": 1
+     },
+     {
+      "text": "The new middle is twenty three: found in just two checks.",
+      "focus": 2
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Binary search only works on which kind of list?",
+    "options": [
+     "Any list",
+     "A sorted list",
+     "A list of words only"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What kind of list does binary search need?"
+     },
+     {
+      "text": "A sorted list. Cutting in half only works when values are in order.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "About how many steps for 1,000 sorted items?",
+    "options": [
+     "About 10",
+     "About 100",
+     "About 500"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. About how many steps for a thousand items?"
+     },
+     {
+      "text": "About ten, because two to the power ten is about a thousand.",
+      "focus": 0
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What is the time complexity of binary search?",
+    "options": [
+     "O(n)",
+     "O(log n)",
+     "O(n²)"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What is its time complexity?"
+     },
+     {
+      "text": "O of log n: the work grows very slowly as the list grows.",
+      "focus": 1
+     }
+    ]
+   }
+  ]
+ }
+}

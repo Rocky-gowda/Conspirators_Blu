@@ -1,0 +1,44 @@
+# Big model files (GitHub refuses files over 100 MB)
+models/
+*.onnx
+*.bin
+*.safetensors
+*.pt
+*.gguf
+
+# Personal lessons, history, PDFs and videos
+data/
+*.mp4
+*.wav
+*.srt
+
+# Python leftovers
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+*.egg-info/
+
+# Secrets: never upload tokens or passwords
+.env
+*.token
+hf_token*
+.huggingface/
+
+# Backups and downloads
+*.bak
+*.zip
+update_blu*.py
+make_legal_files.py
+backup*/
+
+# Editor and system files
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log

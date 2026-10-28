@@ -1,0 +1,322 @@
+{
+ "id": "python_basics",
+ "domain": "programming",
+ "keywords": "python programming language interpreter code program variable variables print function functions list lists dictionary bytecode generator generators",
+ "facts": [
+  "Python is a high-level programming language known for clear, readable code.",
+  "The Python interpreter runs the instructions in a program in order, from top to bottom.",
+  "A variable is a name that refers to a value, such as age = 12.",
+  "print() shows a value as output.",
+  "In Python 3, dividing with / always gives a decimal number (a float), for example 240 / 3 gives 80.0.",
+  "CPython first compiles source code into bytecode, which its virtual machine then executes.",
+  "A generator uses yield to produce values one at a time instead of building a whole list in memory."
+ ],
+ "prerequisites": [
+  "What is a computer program?"
+ ],
+ "next_topics": [
+  "How does a Python loop work?",
+  "Functions",
+  "Lists and dictionaries"
+ ],
+ "lesson": {
+  "title": "What is Python and how does it work?",
+  "scenes": [
+   {
+    "type": "title_card",
+    "heading": "What is Python and how does it work?",
+    "subtitle": "A clear language that a computer runs step by step",
+    "narration": [
+     {
+      "text": "Python is a programming language that uses simple, readable words."
+     }
+    ]
+   },
+   {
+    "type": "diagram",
+    "heading": "Step 1: From code to result",
+    "layout": "flow",
+    "items": [
+     "You write code",
+     "Python reads it",
+     "Runs it in order",
+     "Shows the output"
+    ],
+    "icons": [
+     "⌨️",
+     "🐍",
+     "⚙️",
+     "🖥️"
+    ],
+    "edge_labels": [
+     "save file",
+     "line by line",
+     "print"
+    ],
+    "narration": [
+     {
+      "text": "You write instructions in a file that ends in dot p y.",
+      "focus": 0
+     },
+     {
+      "text": "The Python interpreter reads those instructions.",
+      "focus": 1
+     },
+     {
+      "text": "It runs them in order, from top to bottom.",
+      "focus": 2
+     },
+     {
+      "text": "Anything you print appears on the screen as output.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "code_walkthrough",
+    "heading": "Step 2: Your first program",
+    "code": "name = \"Asha\"\nage = 12\nprint(\"Hi\", name)\nprint(age + 1)",
+    "code_language": "python",
+    "output": [
+     "Hi Asha",
+     "13"
+    ],
+    "narration": [
+     {
+      "text": "A variable is a name for a value. Here, name holds Asha.",
+      "focus": 1
+     },
+     {
+      "text": "Age holds the number twelve.",
+      "focus": 2
+     },
+     {
+      "text": "Print shows Hi and then the name, so we see Hi Asha.",
+      "focus": 3
+     },
+     {
+      "text": "Age plus one is thirteen, so the last line prints thirteen.",
+      "focus": 4
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "diagram",
+    "heading": "Step 2: The building blocks",
+    "layout": "hub",
+    "items": [
+     "A Python program",
+     "Variables",
+     "Functions",
+     "Lists and dictionaries",
+     "If and loops"
+    ],
+    "icons": [
+     "🐍",
+     "📦",
+     "🧩",
+     "📚",
+     "🔁"
+    ],
+    "narration": [
+     {
+      "text": "Most Python programs are built from four kinds of pieces.",
+      "focus": 0
+     },
+     {
+      "text": "Variables store values, and functions package steps you can reuse.",
+      "focus": 2
+     },
+     {
+      "text": "Lists and dictionaries hold many values together.",
+      "focus": 3
+     },
+     {
+      "text": "If statements and loops decide which steps run, and how often.",
+      "focus": 4
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate",
+     "advanced"
+    ],
+    "type": "code_walkthrough",
+    "heading": "Step 3: A function with a list",
+    "code": "def average(marks):\n    return sum(marks) / len(marks)\n\nscores = [70, 80, 90]\nprint(average(scores))",
+    "code_language": "python",
+    "output": [
+     "80.0"
+    ],
+    "narration": [
+     {
+      "text": "Def creates a function called average that takes a list of marks.",
+      "focus": 1
+     },
+     {
+      "text": "It adds the marks and divides by how many there are.",
+      "focus": 2
+     },
+     {
+      "text": "Scores is a list of three numbers.",
+      "focus": 4
+     },
+     {
+      "text": "The total is two hundred forty, divided by three gives eighty point zero.",
+      "focus": 5
+     },
+     {
+      "text": "A common surprise: dividing with a slash always gives a decimal number.",
+      "focus": 5
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "diagram",
+    "heading": "Step 4: What CPython really does",
+    "layout": "flow",
+    "items": [
+     "Source code",
+     "Bytecode",
+     "Virtual machine",
+     "Objects in memory"
+    ],
+    "icons": [
+     "📄",
+     "🔢",
+     "⚙️",
+     "🧠"
+    ],
+    "edge_labels": [
+     "compile",
+     "execute",
+     "create"
+    ],
+    "narration": [
+     {
+      "text": "The standard Python, called C Python, first compiles your source code into bytecode.",
+      "focus": 1
+     },
+     {
+      "text": "A virtual machine then executes the bytecode instructions one by one.",
+      "focus": 2
+     },
+     {
+      "text": "Every value is an object, and memory is freed when nothing refers to it any more.",
+      "focus": 3
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "code_walkthrough",
+    "heading": "Step 5: Generators save memory",
+    "code": "def squares(n):\n    for i in range(n):\n        yield i * i\n\nprint(sum(squares(4)))\nprint(list(squares(3)))",
+    "code_language": "python",
+    "output": [
+     "14",
+     "[0, 1, 4]"
+    ],
+    "narration": [
+     {
+      "text": "Yield turns this function into a generator.",
+      "focus": 3
+     },
+     {
+      "text": "It produces one square at a time, only when asked, instead of storing a whole list.",
+      "focus": 3
+     },
+     {
+      "text": "Sum pulls the values zero, one, four and nine, which add up to fourteen.",
+      "focus": 5
+     },
+     {
+      "text": "The trade-off: a generator can only be read once, from start to end.",
+      "focus": 6
+     }
+    ]
+   },
+   {
+    "levels": [
+     "beginner"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "If age = 12, what does print(age + 1) show?",
+    "options": [
+     "12",
+     "13",
+     "age + 1"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What does print age plus one show?"
+     },
+     {
+      "text": "Thirteen, because age is twelve and we add one.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "intermediate"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "What does average([70, 80, 90]) return?",
+    "options": [
+     "80",
+     "80.0",
+     "240"
+    ],
+    "answer": 1,
+    "narration": [
+     {
+      "text": "Quick check. What does the average function return?"
+     },
+     {
+      "text": "Eighty point zero, because dividing with a slash gives a decimal number.",
+      "focus": 1
+     }
+    ]
+   },
+   {
+    "levels": [
+     "advanced"
+    ],
+    "type": "quiz",
+    "heading": "Quick check",
+    "question": "Why can a generator use less memory than a list?",
+    "options": [
+     "It makes values one at a time",
+     "It stores values on disk",
+     "It runs on the graphics card"
+    ],
+    "answer": 0,
+    "narration": [
+     {
+      "text": "Quick check. Why can a generator save memory?"
+     },
+     {
+      "text": "It makes each value only when it is needed, so no full list is stored.",
+      "focus": 0
+     }
+    ]
+   }
+  ]
+ }
+}

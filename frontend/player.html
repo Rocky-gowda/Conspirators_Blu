@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blu Lesson Player</title>
+<link rel="stylesheet" href="player.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect x=%222%22 y=%222%22 width=%2236%22 height=%2236%22 rx=%2211%22 fill=%22%232F6FED%22/%3E%3Cpath d=%22M16 12.5v15l12-7.5z%22 fill=%22white%22/%3E%3C/svg%3E">
+<style>
+  html, body { margin: 0; background: #0E1220; font-family: "Noto Sans", system-ui, sans-serif; }
+  #frame { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; aspect-ratio: 16/9; overflow: hidden; }
+  .controls { max-width: 1280px; margin: 0 auto; display: flex; gap: 8px; align-items: center; padding: 10px 12px; flex-wrap: wrap; }
+  .controls button { font: 600 15px system-ui; padding: 10px 16px; border-radius: 10px; border: 0; background: #22294A; color: #fff; cursor: pointer; min-width: 44px; }
+  .controls button.primary { background: #2F6FED; }
+  .controls .time { color: #9FB0D0; font: 14px ui-monospace, monospace; margin-left: auto; }
+  .scenes { display: flex; gap: 6px; flex-wrap: wrap; }
+  .scenes button { background: #1A2038; font-weight: 500; }
+  .scenes button.on { background: #3A4777; }
+  body.export { background: #FBF8F3; }
+  body.export #frame { width: 1280px; height: 720px; max-width: none; }
+  body.export .controls, body.export .wait { display: none; }
+  body.export * { transition: none !important; }  /* every frame must be exactly its time t */
+  body.export .progress .fill { display: none; }  /* FFmpeg draws the moving bar */
+</style>
+</head>
+<body>
+<div id="frame"><div class="stage" id="stage"></div></div>
+<div class="controls">
+  <button id="play" class="primary" aria-label="Play">▶ Play</button>
+  <button id="prev" aria-label="Previous scene">⏮</button>
+  <button id="next" aria-label="Next scene">⏭</button>
+  <button id="replay" aria-label="Replay">↺ Replay</button>
+  <div class="scenes" id="scenes"></div>
+  <span class="time" id="time">0:00 / 0:00</span>
+</div>
+<script type="module">
+import { Player } from "./player.js";
+
+const q = new URLSearchParams(location.search);
+const id = q.get("id"), exportMode = q.get("export") === "1";
+if (exportMode) document.body.classList.add("export");
+const base = `/lessons/${id}/`;
+const getTL = async () => (await fetch(base + "timeline.json?ts=" + Date.now())).json();
+let tl = await getTL();
+const stage = document.getElementById("stage");
+const p = new Player(stage, tl, base);
+// make sure every font is loaded before the first frame (no fallback-font flash in the MP4)
+const sample = tl.scenes.flatMap(s => s.beats.map(b => b.text)).join(" ").slice(0, 400);
+await Promise.all([`700 30px "Noto Sans"`, `400 30px "Noto Sans"`, `400 30px "Noto Sans Mono"`,
+  `400 30px "${tl.font}"`, `700 30px "${tl.font}"`].map(f => document.fonts.load(f, sample).catch(() => {})));
+await document.fonts.ready;
+
+window.renderAt = t => p.render(t);
+// Export: render frame t and return a signature of everything visible except the progress bar.
+// Same signature as the previous frame => the exporter reuses that image.
+window.renderSig = t => {
+  p.render(t);
+  return p.cur + "|" + p.sceneRoot.style.opacity + "|" + p.capEl.textContent + "|" + p.capEl.style.opacity
+    + "|" + p.sceneRoot.innerHTML;
+};
+
+if (exportMode) { p.render(0); window.__ready = true; }
+else {
+  const frame = document.getElementById("frame");
+  const fit = () => { stage.style.transform = `scale(${frame.clientWidth / 1280})`; };
+  addEventListener("resize", fit); fit();
+  const fmt = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  const playBtn = document.getElementById("play"), timeEl = document.getElementById("time");
+  const scenesEl = document.getElementById("scenes");
+
+  // ---- audio: one clip per scene (lets the lesson start before it is fully written).
+  // The clock is scene.start + clip.currentTime, so voice and visuals can never drift.
+  const perScene = tl.scenes.every(s => s.audio);
+  const clips = {};
+  const clipFor = i => {
+    if (!perScene) { if (!clips.all) { clips.all = new Audio(base + tl.audio); clips.all.preload = "auto"; } return clips.all; }
+    if (!clips[i] && tl.scenes[i]) { const a = new Audio(base + tl.scenes[i].audio); a.preload = "auto"; a.onended = () => onEnded(i); clips[i] = a; }
+    return clips[i];
+  };
+  let cur = 0, playing = false, waiting = false, ended = false, started = false;
+  const now = () => perScene ? (tl.scenes[cur]?.start ?? 0) + (clipFor(cur)?.currentTime ?? 0) : clipFor(0).currentTime;
+  const pauseAll = () => Object.values(clips).forEach(a => a.pause());
+  const playCur = () => { const a = clipFor(cur); if (a) { a.play().catch(() => { playing = false; updateBtn(); }); clipFor(cur + 1); } };
+  function onEnded(i) {
+    if (i !== cur || !playing) return;
+    if (cur + 1 < tl.scenes.length) { cur++; clipFor(cur).currentTime = 0; playCur(); }
+    else if (!tl.complete) { waiting = true; p.setWaiting(true); }
+    else { playing = false; ended = true; updateBtn(); }
+  }
+  if (!perScene) clipFor(0).onended = () => { playing = false; ended = true; updateBtn(); };
+  const updateBtn = () => playBtn.textContent = playing ? "❚❚ Pause" : "▶ Play";
+  function seek(t) {
+    started = true;
+    t = Math.max(0, Math.min(tl.duration - 0.01, t));
+    pauseAll(); ended = false; waiting = false; p.setWaiting(false);
+    if (perScene) { cur = p.sceneAt(t); clipFor(cur).currentTime = t - tl.scenes[cur].start; }
+    else clipFor(0).currentTime = t;
+    if (playing) playCur();
+    p.render(t);
+  }
+  function play() {
+    started = true;
+    if (ended) { seek(0); }
+    playing = true; updateBtn();
+    if (!waiting) playCur();
+  }
+  function pause() { playing = false; pauseAll(); updateBtn(); }
+
+  // ---- while the lesson is still being written, fetch new scenes as they arrive
+  let chips = [];
+  function buildChips() {
+    scenesEl.innerHTML = "";
+    chips = tl.scenes.map((s, i) => { const b = document.createElement("button"); b.textContent = i + 1; b.title = s.data.heading; b.onclick = () => seek(s.start); scenesEl.appendChild(b); return b; });
+  }
+  buildChips();
+  async function poll() {
+    if (tl.complete) return;
+    try {
+      const nt = await getTL();
+      if (nt.scenes.length !== tl.scenes.length || nt.complete !== tl.complete) {
+        tl = nt; p.setTimeline(tl); buildChips();
+        if (waiting && cur + 1 < tl.scenes.length) {
+          waiting = false; p.setWaiting(false); cur++; clipFor(cur).currentTime = 0; if (playing) playCur();
+        } else if (waiting && tl.complete) { waiting = false; p.setWaiting(false); playing = false; ended = true; updateBtn(); }
+      }
+    } catch (e) {}
+    setTimeout(poll, tl.complete ? 1000 : 300);      // while slides are still being made: check often
+  }
+  poll();
+
+  playBtn.onclick = () => playing ? pause() : play();
+  document.getElementById("replay").onclick = () => { seek(0); play(); };
+  document.getElementById("next").onclick = () => { const i = p.sceneAt(now()); if (i < tl.scenes.length - 1) seek(tl.scenes[i + 1].start); };
+  document.getElementById("prev").onclick = () => { const i = p.sceneAt(now()); const s = tl.scenes[i]; seek(now() - s.start > 1.5 || i === 0 ? s.start : tl.scenes[i - 1].start); };
+  stage.onclick = () => playBtn.click();
+  addEventListener("keydown", e => { if (e.code === "Space") { e.preventDefault(); playBtn.click(); } });
+  const loop = () => {
+    const t = now();
+    // before the first Play, show a poster frame (the title fully drawn) instead of frame 0
+    p.render(!started && t === 0 ? Math.min(1.2, tl.scenes[0].end - 0.1) : t);
+    timeEl.textContent = `${fmt(t)} / ${fmt(tl.duration)}${tl.complete ? "" : "+"}`;
+    const ci = p.sceneAt(t);
+    chips.forEach((c, i) => c.classList.toggle("on", i === ci));
+    requestAnimationFrame(loop);
+  };
+  loop();
+  if (q.get("autoplay") === "1") play();
+}
+</script>
+</body>
+</html>
